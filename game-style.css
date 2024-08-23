@@ -1,0 +1,187 @@
+/*SITE SETUP*/
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+img {
+    width: 100%;
+}
+
+:root{
+--color-dark-blue:#152040; /* darkblue */
+--color-blue:#0588A6; /* blue */
+--color-beige-white:#FFF9ED;/* white */
+--color-light-blue:#07C4D9; /* aqua */
+--color-yellow:#FDAF2B; /* yellow */
+--color-light-yellow:#FFE69B; /* light yellow */
+--color-red-1:#D14242; /* red */
+}
+
+
+
+/* FONTS */
+@font-face {
+    font-family: MoonGet;
+    src: url(fonts/moon_get-Heavy.ttf)
+}   
+
+@font-face {
+    font-family: Neue;
+    src: url(fonts/NeueHaasUnica/NeueHaasUnica-Bold.ttf)
+}   
+
+@font-face{
+    font-family: BuiltTitling;
+    src: url(fonts/BuiltTitling/built\ titling\ bd.ttf)
+}
+
+
+/*GAME STYLES*/
+
+#board {
+    width: 740px;
+    height: 540px;
+    /* background-color: green; */
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    background: url("./soil.png");
+    background-size: cover;
+    border: 0px solid white;
+    border-radius: 25px;
+}
+
+#board div {
+    /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
+    width: 184px; 
+    height: 180px;
+    background-image: url("images/planet.png");
+    background-size: cover;
+    margin: 10px ;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: MoonGet;
+    color: #FDAF2B;
+}
+
+h2{
+    font-family: BuiltTitling;
+}
+
+.game h1{
+    margin-top:30px;
+}
+
+.subtext{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.score{
+    color: #FDAF2B;
+    text-align: center;
+    font-family: MoonGet;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.game-timer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.game-timer-img{
+    height: 20px;
+    width: auto;
+}
+
+.game-timer-txt{
+    color: #FDAF2B;
+    text-align: center;
+    font-family: MoonGet;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+
+#board div img {
+    /* all img tags inside tiles */
+    width: 120px;
+    height: 120px;
+    margin-left:30px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 768px){
+    #board{
+        width:555px;
+    }
+
+    #board div {
+        /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
+        width: 124px; 
+        height: 120px;
+        background-image: url("images/planet.png");
+        background-size: cover;
+        margin: 10px ;
+    }
+
+    #board div img{
+        height: 88px;
+        width: 90px;
+    }
+
+    }
+    
+    @media only screen and (max-width: 428px){
+        #board div{
+            width: 94px;
+            height: 92px;
+        }
+
+        #board{
+            width: 425px;
+        }
+
+        #board div img{
+            height: 78px;
+            width: 80px;
+            margin-left: 5px;
+        }
+
+    }
